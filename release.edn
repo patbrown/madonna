@@ -1,0 +1,3 @@
+{:group-id "tools.drilling"
+ :artifact-id "madonna"
+ :scm-url "https://github.com/patbrown/madonna"}

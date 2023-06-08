@@ -1,0 +1,12 @@
+{:deps {:aliases [:dev]}
+ :dev-http {4040 "classpath:public"}
+ :builds {:main {:target :browser
+                 :output-dir "resources/public/js/main"
+                 :compiler-options {:reader-features #{:cljs :browser}}
+                 :asset-path "/js/main"
+                 :modules {:main {:init-fn core/init
+                                  :entries [core]}}
+                 :devtools {:after-load core/refresh
+                            :preloads [com.fulcrologic.fulcro.inspect.preload
+                                       com.fulcrologic.fulcro.inspect.dom-picker-preload]
+                            :repl-pprint true}}}}
